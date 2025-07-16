@@ -4,7 +4,6 @@ import { getShape, type Shape } from "./model/types/shape";
 import type MediaFile from "./model/mediaFile";
 import { MediaTypes } from "./model/types/mediaTypes";
 import type MCImage from "./model/types/image/image";
-// AAAAAAAAAAAAAA
 /**
  * OrderBy options for the gallery.
  * Options are in camelCase
@@ -306,10 +305,8 @@ export default class Query {
 			const item = this.files[this.currentIndex];
 
 			if (await this.testFile(item)) {
-				if (item.file.path.includes('/questiNO')) {
-					found.push(item);
-					this.totalFound++;
-				}
+				found.push(item);
+				this.totalFound++;
 			}
 		}
 		return found;
